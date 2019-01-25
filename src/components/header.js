@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 import ims from '../images/wnis2.png';
+import { LOGIN,ABOUT,HOME,CONTACT } from '../routes/';
 
 const Header =() => {
   return (
@@ -16,18 +17,21 @@ const Header =() => {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item active">
-            <Link className="nav-link" to="/add">Home <span className="sr-only fa fa-plus">(current)</span></Link>
+            <Link className="nav-link" to="/">Home <span className="sr-only fa fa-plus">(current)</span></Link>
           </li>
           <li className="nav-item active">
-            <Link className="nav-link" to="/theme">About </Link>
+            <Link className="nav-link" to={ABOUT}>About </Link>
           </li>
           <li className="nav-item active">
             <Link className="nav-link" to="/posts">Services </Link>
           </li>
           <li className="nav-item active">
-            <Link className="nav-link" to="/redux">Contact us </Link>
+            <Link className="nav-link" to={CONTACT}>Contact us </Link>
           </li>
-          
+          <li className="nav-item active">
+            <Link className="nav-link" to="/gallery">Gallery</Link>
+          </li>
+
         </ul>
 
       </div>
